@@ -54,8 +54,10 @@ export default function Header() {
           <li><Link to="/" className="hover:text-yellow-400 transition">Ínicio</Link></li>
           <li><Link to="/sobre" className="hover:text-yellow-400 transition">Sobre</Link></li>
           <li><Link to="/" className="hover:text-yellow-400 transition">Projetos</Link></li>
+          <li><Link to="/" className="hover:text-yellow-400 transition">Parceiros</Link></li>
           <li><Link to="/doar" className="hover:text-yellow-400 transition">Doar</Link></li>
           <li><Link to="/" className="hover:text-yellow-400 transition">Contato</Link></li>
+          <li><Link to="/" className="hover:text-yellow-400 transition">Brechó</Link></li>
           <li><Link to="/galeria" className="hover:text-yellow-400 transition">Galeria</Link></li>
         </ul>
       </nav>
