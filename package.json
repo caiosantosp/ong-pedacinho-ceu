@@ -31,7 +31,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://caiosantosp.github.io/ong-pedacinho-ceu",
   "browserslist": {
     "production": [
       ">0.2%",
