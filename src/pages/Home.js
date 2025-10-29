@@ -175,16 +175,15 @@ export default function DoarPage() {
                                 className="w-full h-56 object-cover"
                             />
                             <div className="p-4">
-                                <h4 className="font-semibold text-lg mb-2">Palestra da Sede da Igreja</h4>
+                                <h4 className="font-semibold text-lg mb-2">Palestra sobre o Autismo</h4>
                                 <p className="text-gray-600 text-sm">
-                                    Participamos de uma palestra na sede da Igreja Ad Cajamar, compartilhando nossa missão e fortalecendo parcerias em fé e amor para o cuidado e desenvolvimento de crianças em vulnerabilidade.
+                                    No dia 19/07, aconteceu a palestra “Entendendo o Autismo na Infância”, com a palestrante Giovanna Batista. Foi um momento enriquecedor de aprendizado e conscientização sobre o Transtorno do Espectro Autista (TEA), promovendo inclusão e compreensão na nossa comunidade.
                                 </p>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
-
 
             {/* CTA / DOAR */}
             <section id="como-ajudar" className="py-20 bg-white text-center">
@@ -195,8 +194,74 @@ export default function DoarPage() {
                 </motion.div>
             </section>
 
+                        {/* PARCEIROS */}
+            <section id="parceiros" className="py-20 bg-gray-50 text-center"> {/* Fundo levemente cinza para alternar */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-6xl mx-auto px-4"
+                >
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-600">QUEM CAMINHA CONOSCO</h3>
+                    <p className="text-gray-700 mb-16 max-w-2xl mx-auto">Empresas que acreditam em nosso impacto e investem na transformação social da nossa comunidade.</p>
+
+                    {/* Grid de Logos Falsos 
+                  Idealmente, você substituirá os <span> por <img> com os logos reais.
+                  Usei 'grayscale' e 'opacity' para dar um visual uniforme, que é comum em "logo walls".
+                */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center mb-12">
+
+                        {/* Parceiro Falso 1 */}
+                        <motion.div whileHover={{ scale: 1.1, opacity: 1 }} className="opacity-70 transition-opacity" title="Parceiro: TechCorp">
+                            <span className="text-2xl font-bold text-gray-500">
+                                TechCorp
+                            </span>
+                        </motion.div>
+
+                        {/* Parceiro Falso 2 */}
+                        <motion.div whileHover={{ scale: 1.1, opacity: 1 }} className="opacity-70 transition-opacity" title="Parceiro: Sinergia">
+                            <span className="text-2xl font-bold text-gray-500">
+                                Sinergia
+                            </span>
+                        </motion.div>
+
+                        {/* Parceiro Falso 3 */}
+                        <motion.div whileHover={{ scale: 1.1, opacity: 1 }} className="opacity-70 transition-opacity" title="Parceiro: InovaSoluções">
+                            <span className="text-2xl font-bold text-gray-500">
+                                InovaSoluções
+                            </span>
+                        </motion.div>
+
+                        {/* Parceiro Falso 4 */}
+                        <motion.div whileHover={{ scale: 1.1, opacity: 1 }} className="opacity-70 transition-opacity" title="Parceiro: EcoVerde">
+                            <span className="text-2xl font-bold text-gray-500">
+                                EcoVerde
+                            </span>
+                        </motion.div>
+
+                        {/* Parceiro Falso 5 */}
+                        <motion.div whileHover={{ scale: 1.1, opacity: 1 }} className="opacity-70 transition-opacity" title="Parceiro: Grupo Valor">
+                            <span className="text-2xl font-bold text-gray-500">
+                                Grupo Valor
+                            </span>
+                        </motion.div>
+                    </div>
+
+                    {/* CTA para novos parceiros */}
+                    <p className="text-gray-600 mt-12">Quer ver a sua marca aqui e se tornar um parceiro da Pedacinho do Céu?</p>
+                    <motion.a
+                        href="#contato" // Sugestão: linkar para a seção de contato
+                        whileHover={{ scale: 1.05 }}
+                        className="mt-4 inline-block text-green-600 font-semibold border-b-2 border-green-600 hover:border-green-700"
+                    >
+                        Entre em contato conosco
+                    </motion.a>
+                </motion.div>
+            </section>
+
             {/* CONTATO */}
-            <section id="contato" className="py-20 bg-gray-50">
+            <section id="contato" className="py-20 bg-white-50">
                 {/* Adicionamos a animação */}
                 <motion.div
                     className="max-w-4xl mx-auto px-6 text-center"

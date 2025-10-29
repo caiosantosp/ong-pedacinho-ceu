@@ -60,9 +60,6 @@ export default function Footer() {
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="text-gray-300 hover:text-yellow-400 transition">
                                 <FaFacebook size={28} />
                             </a>
-                             <a href="https://www.adcajamar.com" target="_blank" rel="noopener noreferrer" title="AdCajamar" className="text-gray-300 hover:text-yellow-400 transition">
-                                <FaChurch size={28} />
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import acolhedor from '../assets/projeto4.jpeg';
 export default function SobreNos() {
   return (
     <>
+    <br></br>
       {/* SEÇÃO "SOBRE NÓS" */}
       <section id="sobre" className="py-20 bg-white text-gray-800">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -21,10 +22,11 @@ export default function SobreNos() {
             <div className="md:w-1/2 md:pr-10 mb-8 md:mb-0">
               <h3 className="text-3xl font-semibold text-gray-800 mb-4">O Início de Tudo</h3>
               <p className="mb-4 text-gray-700 leading-relaxed">
-                A ONG "Pedacinho do Céu" nasceu em 2010, não como uma organização, mas como um impulso. Ana Clara, nossa fundadora e ex-professora da rede pública, via diariamente crianças de sua comunidade com um potencial imenso, mas sem um lugar seguro para ficar após a escola.
+                A Pedacinho do Céu nasceu do coração de um grupo de colegas que acreditaram que cada criança merece amor genuíno, cuidados e oportunidade para crescer saudável de forma física, emocional, mental e principalmente profissional, dando seguimento em suas vidas no futuro. Inspirados pela fé e pelo desejo de transformar vidas, começaram abraçando as famílias da comunidade da região, distribuindo cesta básica, itens de higiene, roupas, calçados, brinquedos e tudo que esteve em seu alcance financeiro para se fazer. 
+                Hoje, a Pedacinho do Céu é um espaço de esperança e acolhimento através do sorriso de cada criança e adolescente atendidos.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Ela começou com o que tinha: sua própria garagem, alguns livros usados e uma grande vontade de oferecer um "pedacinho do céu" – um refúgio de paz e aprendizado. O que era uma simples roda de leitura e ajuda com o dever de casa para cinco crianças, logo chamou a atenção de outros voluntários.
+                A Pedacinho do Céu está apenas no início de um grande sonho, pois, apenas em Junho de 2025 o nosso CNPJ se tornou uma realidade após diversos desafios enfrentados. Temos como meta acolhermos crianças e adolescentes de 0 -17 anos vítimas de maus tratos e vulnerabilidade em nosso próprio espaço ofertando amor, dedicação, educação e oportunidades melhores de vida no futuro a partir da adoção. Entendemos que este é um caminho longo a ser seguido, mas, que estamos desde então nos preparando para este grande momento onde vidas poderão ser transformadas através de nosso trabalho e dedicação.
               </p>
             </div>
             <div className="md:w-1/2">
@@ -65,44 +67,57 @@ export default function SobreNos() {
           </div>
 
           {/* Valores */}
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-10">Nossos Valores</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-              
-              <div className="flex flex-col items-center">
-                <div className="bg-teal-600 p-4 rounded-full mb-3">
-                  <Heart className="w-6 h-6 text-black" />
+            <div className="text-center mb-16">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-10">Nossos Valores</h3>
+              {/* AJUSTE AQUI: Mudei de "sm:grid-cols-2 md:grid-cols-4" 
+                para "sm:grid-cols-3 md:grid-cols-5" para acomodar os 5 itens de forma harmônica.
+              */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8">
+                
+                <div className="flex flex-col items-center">
+                  <div className="bg-teal-600 p-4 rounded-full mb-3">
+                    <Heart className="w-6 h-6 text-black" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-800">Acolhimento</h4>
+                  <p className="text-gray-600">Um lugar de escuta, afeto e segurança.</p>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800">Acolhimento</h4>
-                <p className="text-gray-600">Um lugar de escuta, afeto e segurança.</p>
-              </div>
 
-              <div className="flex flex-col items-center">
-                <div className="bg-teal-600 p-4 rounded-full mb-3">
-                  <Users className="w-6 h-6 text-black" />
+                <div className="flex flex-col items-center">
+                  <div className="bg-teal-600 p-4 rounded-full mb-3">
+                    <Users className="w-6 h-6 text-black" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-800">Respeito</h4>
+                  <p className="text-gray-600">Valorizamos a história de cada indivíduo.</p>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800">Respeito</h4>
-                <p className="text-gray-600">Valorizamos a história de cada indivíduo.</p>
-              </div>
 
-              <div className="flex flex-col items-center">
-                <div className="bg-teal-600 p-4 rounded-full mb-3">
-                  <span className="font-bold text-xl text-black">E</span> {/* Simbolizando Educação */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-teal-600 p-4 rounded-full mb-3">
+                    <Users className="w-6 h-6 text-black" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-800">Visão de Futuro</h4>
+                  {/* AJUSTE AQUI: Sugestão de texto mais curto para manter o equilíbrio 
+                  */}
+                  <p className="text-gray-600">Melhoria contínua para o indivíduo e a comunidade.</p>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800">Educação</h4>
-                <p className="text-gray-600">A principal ferramenta de transformação.</p>
-              </div>
 
-              <div className="flex flex-col items-center">
-                <div className="bg-teal-600 p-4 rounded-full mb-3">
-                  <span className="font-bold text-xl text-black">T</span> {/* Simbolizando Transparência */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-teal-600 p-4 rounded-full mb-3">
+                    <span className="font-bold text-xl text-black">E</span> {/* Simbolizando Educação */}
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-800">Educação</h4>
+                  <p className="text-gray-600">A principal ferramenta de transformação.</p>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-800">Transparência</h4>
-                <p className="text-gray-600">Clareza em nossas ações e uso de recursos.</p>
-              </div>
 
+                <div className="flex flex-col items-center">
+                  <div className="bg-teal-600 p-4 rounded-full mb-3">
+                    <span className="font-bold text-xl text-black">T</span> {/* Simbolizando Transparência */}
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-800">Transparência</h4>
+                  <p className="text-gray-600">Clareza em nossas ações e uso de recursos.</p>
+                </div>
+
+              </div>
             </div>
-          </div>
 
           {/* CTA Final */}
           <div className="text-center bg-gray-900 text-white p-12 rounded-lg">
