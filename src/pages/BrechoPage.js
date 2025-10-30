@@ -28,7 +28,7 @@ export default function DoarBrecho() {
           {/* Grid de Contato (Estilo da Imagem)
             ATUALIZAÇÃO: Agora cada item é um <a> (link) e usa 'group-hover'
           */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-10">
             
             {/* WhatsApp */}
             <a 

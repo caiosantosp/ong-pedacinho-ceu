@@ -23,7 +23,7 @@ export default function ContatoPage() {
           </p>
 
           {/* Grid de Contato */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-2xl mx-auto">
             
             {/* WhatsApp */}
             <a 
