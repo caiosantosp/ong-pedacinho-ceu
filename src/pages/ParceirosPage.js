@@ -47,54 +47,7 @@ export default function ParceirosPage() {
           {/* Grid de Logos Falsos (substitua os <span> por <img>) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 items-center justify-items-center">
             
-            {/* Parceiro Falso 1 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro TechCorp">
-              {/* <img src="/logos/techcorp.png" alt="TechCorp" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">TechCorp</span>
-            </div>
-
-            {/* Parceiro Falso 2 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro InovaSoluções">
-              {/* <img src="/logos/inovasolucoes.png" alt="InovaSoluções" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">InovaSoluções</span>
-            </div>
-
-            {/* Parceiro Falso 3 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro EcoVerde">
-              {/* <img src="/logos/ecoverde.png" alt="EcoVerde" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">EcoVerde</span>
-            </div>
-
-            {/* Parceiro Falso 4 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro Grupo Valor">
-              {/* <img src="/logos/grupovalor.png" alt="Grupo Valor" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">Grupo Valor</span>
-            </div>
             
-            {/* Parceiro Falso 5 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro Sinergia">
-              {/* <img src="/logos/sinergia.png" alt="Sinergia" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">Sinergia</span>
-            </div>
-
-            {/* Parceiro Falso 6 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro Raízes Sul">
-              {/* <img src="/logos/raizessul.png" alt="Raízes Sul" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">Raízes Sul</span>
-            </div>
-
-            {/* Parceiro Falso 7 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro Aliança">
-              {/* <img src="/logos/alianca.png" alt="Aliança" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">Aliança</span>
-            </div>
-
-            {/* Parceiro Falso 8 */}
-            <div className="text-center opacity-70 hover:opacity-100 transition-opacity" title="Parceiro Futuro Digital">
-              {/* <img src="/logos/futurodigital.png" alt="Futuro Digital" className="h-12" /> */}
-              <span className="text-2xl font-bold text-gray-500">Futuro Digital</span>
-            </div>
-
           </div>
         </div>
       </section>
