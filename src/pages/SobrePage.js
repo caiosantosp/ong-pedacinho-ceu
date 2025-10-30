@@ -1,5 +1,5 @@
 import { Users, BookOpen, Heart, Target } from 'lucide-react'; // (Exemplo de ícones, caso você use)
-import acolhedor from '../assets/projeto4.jpeg';
+import acolhedor from '../assets/projeto4.png';
 
 export default function SobreNos() {
   return (

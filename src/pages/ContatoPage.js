@@ -27,7 +27,7 @@ export default function ContatoPage() {
             
             {/* WhatsApp */}
             <a 
-              href="https://wa.me/5511912345678" // <-- TROCAR PELO SEU NÚMERO
+              href="https://wa.me/5511956803697" // <-- TROCAR PELO SEU NÚMERO
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex flex-col items-center group"
@@ -37,27 +37,13 @@ export default function ContatoPage() {
               </div>
               <h3 className="text-2xl font-semibold mb-2">WhatsApp</h3>
               <span className="text-xl text-teal-100 group-hover:text-white group-hover:underline">
-                (11) 91234-5678
-              </span>
-            </a>
-
-            {/* Telefone */}
-            <a 
-              href="tel:1145678901" // <-- TROCAR PELO SEU NÚMERO
-              className="flex flex-col items-center group"
-            >
-              <div className="border-2 border-orange-400 rounded-full p-5 mb-4 transform transition-transform group-hover:scale-110">
-                <Phone className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-2">Telefone</h3>
-              <span className="text-xl text-teal-100 group-hover:text-white group-hover:underline">
-                (11) 4567-8901
+                (11) 95680-3697
               </span>
             </a>
 
             {/* E-mail */}
             <a 
-              href="mailto:contato@pedacinhodoceu.org.br" // <-- TROCAR PELO SEU EMAIL
+              href="mailto:ongpedacinhodoceu2025@gmail.com" // <-- TROCAR PELO SEU EMAIL
               className="flex flex-col items-center group"
             >
               <div className="border-2 border-orange-400 rounded-full p-5 mb-4 transform transition-transform group-hover:scale-110">
@@ -65,7 +51,7 @@ export default function ContatoPage() {
               </div>
               <h3 className="text-2xl font-semibold mb-2">E-mail</h3>
               <span className="text-xl text-teal-100 group-hover:text-white group-hover:underline">
-                contato@pedacinhodoceu.org.br
+                ongpedacinhodoceu2025@gmail.com
               </span>
             </a>
 

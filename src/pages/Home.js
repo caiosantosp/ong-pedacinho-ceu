@@ -1,25 +1,138 @@
 // src/pages/DoarPage.js
-import React from 'react';
-import { motion } from 'framer-motion';
 
+import React, { useState, useEffect } from 'react'; // Importa useState e useEffect
+import { motion, AnimatePresence } from 'framer-motion'; // Importa AnimatePresence
+
+// IMPORTS DE ASSETS EXISTENTES
 import logoPadrao from '../assets/logo.png';
-
 import projeto1 from '../assets/projeto1.jpeg';
 import projeto2 from '../assets/projeto2.jpeg';
 import projeto3 from '../assets/projeto3.jpeg';
 
+// --- ATENÇÃO: NOVOS IMPORTS ---
+// 1. Crie e importe sua FOTO da campanha de natal aqui
+// (Exemplo: 'foto-natal.jpg' ou 'foto-natal.png')
+import fotoNatal from '../assets/foto-natal.jpeg'; 
+
+// 2. Importe seu VÍDEO da campanha de natal aqui
+// (Exemplo: 'video-natal.mp4')
+import videoNatal from '../assets/video-natal.mp4'; 
+// ------------------------------
+
 import {
-    FaUserFriends,
-    FaGraduationCap,
-    FaHome,
-    FaUtensils,
-    FaComments,
-    FaBrain,
-    FaEnvelope,
-    FaWhatsapp
+     FaUserFriends,
+    FaGraduationCap,
+    FaHome,
+    FaUtensils,
+    FaComments,
+    FaBrain,
+    FaEnvelope,
+    FaWhatsapp,
+    FaTimes // Ícone para fechar o modal
 } from 'react-icons/fa';
 
+
+// --- NOVO COMPONENTE MODAL ---
+// (Colocado fora do componente principal para melhor organização)
+const ModalNatal = ({ onClose }) => {
+    return (
+        // O Backdrop (fundo escuro)
+        <motion.div
+            className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose} // Fecha ao clicar no fundo
+        >
+            {/* O Conteúdo do Modal */}
+            <motion.div
+                className="bg-white rounded-lg shadow-2xl max-w-2xl w-full p-6 md:p-8 relative max-h-[90vh] overflow-y-auto" // Adicionado max-h e overflow
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                onClick={(e) => e.stopPropagation()} // Impede de fechar ao clicar no conteúdo
+            >
+                {/* Botão de Fechar */}
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl transition-colors z-10"
+                    aria-label="Fechar modal"
+                >
+                    <FaTimes />
+                </button>
+
+                {/* Título */}
+                <h2 className="text-3xl font-bold text-center mb-4 text-red-600 font-fredoka">
+                    🎄 Nosso Natal Solidário! 🎄
+                </h2>
+                <p className="text-center text-gray-700 mb-6 text-lg">
+                    Ajude a fazer a magia do Natal acontecer para nossas crianças. Sua doação se transforma em sorrisos!
+                </p>
+
+                {/* Container do Conteúdo (Foto e Vídeo) */}
+                <div className="space-y-6 mb-8">
+                    
+                    {/* 1. Foto */}
+                    <img
+                        src={fotoNatal} // Sua foto importada
+                        alt="Campanha de Natal Pedacinho do Céu"
+                        className="w-full h-auto max-h-[300px] object-cover rounded-md shadow-lg"
+                    />
+
+                    {/* 2. VÍDEO (Tag <video> do HTML5) */}
+                    <div className="w-full">
+                        <video
+                            className="w-full h-auto rounded-md shadow-lg"
+                            src={videoNatal} // Seu vídeo importado
+                            autoPlay  // Tenta iniciar o vídeo automaticamente
+                            muted     // Necessário para o autoPlay funcionar na maioria dos navegadores
+                            loop      // Faz o vídeo repetir
+                            controls  // Mostra os controles (play, pause, volume)
+                        >
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                </div>
+
+                {/* Botão de Ação (CTA) */}
+                <motion.a
+                    href="/doar" // Leva para a seção de doação
+                    onClick={onClose}     // Também fecha o modal
+                    whileHover={{ scale: 1.05 }}
+                    className="w-full block text-center bg-green-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-green-700 transition-colors"
+                >
+                    Quero Ajudar Agora!
+                </motion.a>
+            </motion.div>
+        </motion.div>
+    );
+};
+// --- FIM DO COMPONENTE MODAL ---
+
+
 export default function DoarPage() {
+    
+    // NOVO: Estado para controlar a visibilidade do modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // --- MUDANÇA AQUI ---
+    // NOVO: Lógica para mostrar o modal a CADA carregamento da página
+    useEffect(() => {
+        // Removemos a verificação do sessionStorage
+        // Agora o modal vai aparecer sempre
+        
+        // Atraso de 1 segundo para não "pular" na cara do usuário
+        const timer = setTimeout(() => {
+            setIsModalOpen(true);
+        }, 1000); // 1000ms = 1 segundo
+
+        return () => clearTimeout(timer); // Limpa o timer se o componente desmontar
+        
+    }, []); // O array vazio [] faz isso rodar apenas uma vez, quando o componente é montado
+    // --- FIM DA MUDANÇA ---
+
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -34,15 +147,25 @@ export default function DoarPage() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
     };
     const impactStats = [
-        { icon: FaUserFriends, color: "text-red-500", stat: "0", label: "Crianças atendidas" },
-        { icon: FaGraduationCap, color: "text-yellow-500", stat: "0", label: "Certificados Emitidos" },
-        { icon: FaHome, color: "text-teal-600", stat: "0", label: "Comunidades Beneficiadas" },
-        { icon: FaUtensils, color: "text-purple-600", stat: "0", label: "Refeições Servidas" },
-        { icon: FaComments, color: "text-red-500", stat: "0", label: "Atendimentos Psicossocial" },
-        { icon: FaBrain, color: "text-teal-600", stat: "0", label: "Atendimentos Psicológicos" }
-    ];
+        { icon: FaUserFriends, color: "text-red-500", stat: "0", label: "Crianças atendidas" },
+        { icon: FaGraduationCap, color: "text-yellow-500", stat: "0", label: "Certificados Emitidos" },
+        { icon: FaHome, color: "text-teal-600", stat: "0", label: "Comunidades Beneficiadas" },
+        { icon: FaUtensils, color: "text-purple-600", stat: "0", label: "Refeições Servidas" },
+        { icon: FaComments, color: "text-red-500", stat: "0", label: "Atendimentos Psicossocial" },
+        { icon: FaBrain, color: "text-teal-600", stat: "0", label: "Atendimentos Psicológicos" }
+    ];
+
     return (
         <div className="font-sans antialiased">
+            
+            {/* ======== NOVO: MODAL DE NATAL ======== */}
+            <AnimatePresence>
+                {isModalOpen && (
+                    <ModalNatal onClose={() => setIsModalOpen(false)} />
+                )}
+            </AnimatePresence>
+            {/* ======================================= */}
+
 
             {/* HERO SECTION */}
             <section className="relative h-[80vh] bg-hero-pattern bg-cover bg-center flex items-center justify-center">
@@ -194,7 +317,7 @@ export default function DoarPage() {
                 </motion.div>
             </section>
 
-                        {/* PARCEIROS */}
+            {/* PARCEIROS */}
             <section id="parceiros" className="py-20 bg-gray-50 text-center"> {/* Fundo levemente cinza para alternar */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -206,10 +329,6 @@ export default function DoarPage() {
                     <h3 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-600">QUEM CAMINHA CONOSCO</h3>
                     <p className="text-gray-700 mb-16 max-w-2xl mx-auto">Empresas que acreditam em nosso impacto e investem na transformação social da nossa comunidade.</p>
 
-                    {/* Grid de Logos Falsos 
-                  Idealmente, você substituirá os <span> por <img> com os logos reais.
-                  Usei 'grayscale' e 'opacity' para dar um visual uniforme, que é comum em "logo walls".
-                */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center mb-12">
 
                         {/* Parceiro Falso 1 */}
