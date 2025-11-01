@@ -7,7 +7,7 @@ import {
 // Você pode precisar importar 'acolhedor' ou outras imagens para os cards
 // import imgProjeto1 from '../assets/projeto1.jpeg';
 // import imgProjeto2 from '../assets/projeto2.jpeg';
-// import imgProjeto3 from '../assets/projeto3.jpeg';
+import imgPalestra from '../assets/palestra.jpeg';
 
 export default function ProjetosPage() {
   return (
@@ -52,76 +52,13 @@ export default function ProjetosPage() {
           {/* Grid de Cards de Projetos */}
           {/* Usando 'space-y-12' para espaçamento em vez de grid, para um layout de blog */}
           <div className="flex flex-col items-center space-y-16">
-            
-            {/* Card Projeto 1 - Reforço Escolar */}
-            <div className="flex flex-col md:flex-row bg-gray-50 rounded-lg shadow-lg overflow-hidden w-full max-w-5xl">
-              {/* Imagem (Use um 'import' ou uma URL) */}
-              <div className="md:w-1/3">
-                <img 
-                  // src={imgProjeto1} 
-                  src="http://googleusercontent.com/images.google.com/9" // Placeholder
-                  alt="Crianças em sala de aula de reforço" 
-                  className="object-cover h-64 w-full md:h-full" 
-                />
-              </div>
-              {/* Conteúdo */}
-              <div className="md:w-2/3 p-8 flex flex-col justify-center">
-                <div className="flex items-center mb-3">
-                  <div className="bg-teal-600 p-2 rounded-full mr-3">
-                    <BookOpen className="w-5 h-5 text-black" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Projeto Sementes do Saber</h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Nosso programa de reforço escolar e apoio pedagógico no contraturno. Oferecemos ajuda com deveres, aulas de leitura e matemática lúdica para garantir que nenhuma criança fique para trás em seu desenvolvimento educacional.
-                </p>
-                <a 
-                  href="#" // Link para a página do projeto (se houver)
-                  className="text-green-600 font-semibold hover:underline w-fit"
-                >
-                  Saber mais (em breve)
-                </a>
-              </div>
-            </div>
-
-            {/* Card Projeto 2 - Oficinas de Arte */}
-            <div className="flex flex-col md:flex-row bg-gray-50 rounded-lg shadow-lg overflow-hidden w-full max-w-5xl">
-              {/* Imagem */}
-              <div className="md:w-1/3">
-                <img 
-                  // src={imgProjeto2} 
-                  src="http://googleusercontent.com/images.google.com/10" // Placeholder
-                  alt="Crianças pintando e desenhando" 
-                  className="object-cover h-64 w-full md:h-full" 
-                />
-              </div>
-              {/* Conteúdo */}
-              <div className="md:w-2/3 p-8 flex flex-col justify-center">
-                <div className="flex items-center mb-3">
-                  <div className="bg-teal-600 p-2 rounded-full mr-3">
-                    <Palette className="w-5 h-5 text-black" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Oficinas de Arte e Expressão</h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Acreditamos na arte como ferramenta de expressão e desenvolvimento da autoestima. Este projeto oferece oficinas de teatro, música (violão e coral) e artes plásticas, abrindo novos horizontes e descobrindo talentos.
-                </p>
-                <a 
-                  href="#" 
-                  className="text-green-600 font-semibold hover:underline w-fit"
-                >
-                  Saber mais (em breve)
-                </a>
-              </div>
-            </div>
-
             {/* Card Projeto 3 - Apoio Psicossocial */}
             <div className="flex flex-col md:flex-row bg-gray-50 rounded-lg shadow-lg overflow-hidden w-full max-w-5xl">
               {/* Imagem */}
               <div className="md:w-1/3">
                 <img 
                   // src={imgProjeto3} 
-                  src="http://googleusercontent.com/images.google.com/11" // Placeholder
+                  src={imgPalestra} // Placeholder
                   alt="Profissional conversando com família" 
                   className="object-cover h-64 w-full md:h-full" 
                 />
@@ -132,11 +69,12 @@ export default function ProjetosPage() {
                   <div className="bg-teal-600 p-2 rounded-full mr-3">
                     <HeartHandshake className="w-5 h-5 text-black" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Acolher e Cuidar</h3>
+                  <h3 className="text-3xl font-bold text-gray-800">Palestra Sobre Autismo</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Oferecemos apoio psicossocial para as crianças e suas famílias. Contamos com psicólogos e assistentes sociais voluntários que fazem atendimentos individuais e em grupo, fortalecendo vínculos e promovendo a saúde mental.
-                </p>
+                  No dia 19 de julho, realizamos a palestra “Entendendo o Autismo na Infância”, ministrada pela enfermeira especialista em Autismo e Analista do Comportamento Giovanna Batista.
+Durante o encontro, aprendemos sobre os principais sinais do autismo na infância, a importância do diagnóstico precoce e as formas de apoio que contribuem para o desenvolvimento e inclusão das crianças no espectro autista.
+                  </p>
                 <a 
                   href="#" 
                   className="text-green-600 font-semibold hover:underline w-fit"

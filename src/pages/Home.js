@@ -242,48 +242,6 @@ export default function DoarPage() {
                         PROJETOS
                     </h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Projeto 1 */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition"
-                        >
-                            <img
-                                src={projeto1}
-                                alt="Projeto 1"
-                                className="w-full h-56 object-cover"
-                            />
-                            <div className="p-4">
-                                <h4 className="font-semibold text-lg mb-2">Reunião com a prefeitura</h4>
-                                <p className="text-gray-600 text-sm">
-                                    Em reunião com a prefeitura, apresentamos nosso primeiro projeto voltado a engajar a comunidade e incentivar o apoio à causa da Pedacinho do Céu, fortalecendo nossa missão de transformar vidas por meio do amor, fé e educação.
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        {/* Projeto 2 */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition"
-                        >
-                            <img
-                                src={projeto2}
-                                alt="Projeto 2"
-                                className="w-full h-56 object-cover"
-                            />
-                            <div className="p-4">
-                                <h4 className="font-semibold text-lg mb-2">Primeira Reunião de equipe</h4>
-                                <p className="text-gray-600 text-sm">
-                                    Realizamos nossa primeira reunião de equipe, alinhando sonhos, propósitos e ações para fortalecer a missão da Pedacinho do Céu e impactar ainda mais vidas com fé, amor e dedicação.
-                                </p>
-                            </div>
-                        </motion.div>
-
                         {/* Projeto 3 */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
